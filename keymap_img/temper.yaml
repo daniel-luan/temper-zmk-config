@@ -96,18 +96,18 @@ layers:
     - ''
     - {t: Forward, h: '$$mdi:forwardburger$$'}
     - ''
-  - - ''
-    - ''
-    - {type: held}
-    - ''
-    - ''
-    - ''
+  - - Middle Click
+    - Left Click
+    - {t: Right Click, type: held}
+    - Right Click
+    - Left Click
+    - Middle Click
   Button:
-  - - {t: Redo, h: '$$mdi:redo$$'}
-    - {t: Paste, h: '$$mdi:content-paste$$'}
-    - {t: Copy, h: '$$mdi:content-copy$$'}
+  - - {t: Undo, h: '$$mdi:undo$$'}
     - {t: Cut, h: '$$mdi:content-cut$$'}
-    - {t: Undo, h: '$$mdi:undo$$'}
+    - {t: Copy, h: '$$mdi:content-copy$$'}
+    - {t: Paste, h: '$$mdi:content-paste$$'}
+    - {t: Redo, h: '$$mdi:redo$$'}
     - {t: Redo, h: '$$mdi:redo$$'}
     - {t: Paste, h: '$$mdi:content-paste$$'}
     - {t: Copy, h: '$$mdi:content-copy$$'}
@@ -123,11 +123,11 @@ layers:
     - {t: RCTRL, h: '$$mdi:apple-keyboard-control$$'}
     - {t: RALT, h: '$$mdi:apple-keyboard-option$$'}
     - {t: RGUI, h: '$$mdi:apple-keyboard-command$$'}
-  - - {t: Redo, h: '$$mdi:redo$$', type: held}
-    - {t: Paste, h: '$$mdi:content-paste$$'}
-    - {t: Copy, h: '$$mdi:content-copy$$'}
+  - - {t: Undo, h: '$$mdi:undo$$', type: held}
     - {t: Cut, h: '$$mdi:content-cut$$'}
-    - {t: Undo, h: '$$mdi:undo$$'}
+    - {t: Copy, h: '$$mdi:content-copy$$'}
+    - {t: Paste, h: '$$mdi:content-paste$$'}
+    - {t: Redo, h: '$$mdi:redo$$'}
     - {t: Redo, h: '$$mdi:redo$$'}
     - {t: Paste, h: '$$mdi:content-paste$$'}
     - {t: Copy, h: '$$mdi:content-copy$$'}
