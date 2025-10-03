@@ -15,6 +15,8 @@ draw_config:
   outer_pad_w: 30.0
   small_pad: 2.0
   split_gap: 30.0
+  dark_mode: false
+  n_columns: 2
   svg_style: |
     /* font and background color specifications */
     svg {
@@ -161,42 +163,53 @@ parse_config:
     UNDS: _
     SPACE: ⎵
   raw_binding_map:
-    '&mm_grescm': {t: '⎋', s: '` ~'}
-    '&mm_bspc_del': {t: '⌫', s: '⌦'}
-    '&bspc_del': {t: '⌫', s: '⌦'}
-    '&mm_grescm_gui': {t: ⎋, h: ⌘, s: '~ `'}
-    '&mm_spc_unds_layer': {t: '⎵', h: 'SYM', s: '_ -'}
-    '&mm_plus_minus': {t: '+', s: '-'}
-    '&mm_grave_caret': {t: '`', s: '^'}
-    '&mm_bracket_r': {t: '(', s: ')'}
-    '&mm_comma_semi_meh': {t: ',', s: ';', h: 'MEH'}
-    '&mm_dot_colon': {t: '.', s: ':'}
-    '&mm_none_undo': ''
-    '&mm_left_word_cut': '↞'
-    '&mm_up_save': '↑'
-    '&mm_down_copy': '↓'
-    '&mm_none_paste': ''
-    '&mm_1_cut': '1'
-    '&mm_2_copy': '2'
-    '&mm_5_save': '5'
-    '&swapper_cmd_tab': {t: '⌘↹'}
-    '&td_at_email': {t: '@'}
-    '&num_word': 'NUM'
-    '&nav_word': 'NAV'
-    '&caps_word_capslock': "Caps\nWord"
-    '&caps_word': '⇪'
-    '&td_shift_l': '⇧'
-    '&td_shift_r': '⇧'
-    '&td_nav_layer': {t: '⏎', h: 'NAV'}
-    '&td_bt_clear': 'BT CLR'
-    '&m_type_md_code_block': '```'
-    '&kt LSHFT': "⇧\nLock"
-    '&lt_num_word 4 0': {t: "Num\nWord", h: 'Num'}
-    '&ltog LGUI 5': {t: "Cancel\nNav", h: '⌘'}
-    '&ltog LGUI 6': {t: "Cancel\nNum", h: '⌘'}
-    '&ltog LGUI 7': {t: "Cancel\nSym", h: '⌘'}
-    '&ltog LGUI 8': {t: "Cancel\nFunc", h: '⌘'}
-    '&ltog LGUI 9': {t: "Cancel\nAdjust", h: '⌘'}
+    "&bootloader": { t: Boot, h: $$mdi:progress-download$$ }
+    "&caps_word": { t: Caps Word, h: $$mdi:apple-keyboard-caps$$ }
+    "&studio_unlock": { t: ZMK Studio, h: $$mdi:lock-open-variant$$ }
+
+    "&kp UP": $$mdi:arrow-up$$
+    "&kp DOWN": $$mdi:arrow-down$$
+    "&kp LEFT": $$mdi:arrow-left$$
+    "&kp RIGHT": $$mdi:arrow-right$$
+
+    "&kp C_STOP": $$mdi:stop$$
+    "&kp C_PP": $$mdi:play-pause$$
+    "&kp C_PREV": $$mdi:skip-previous$$
+    "&kp C_NEXT": $$mdi:skip-next$$
+    "&kp C_VOL_DN": $$mdi:volume-minus$$
+    "&kp C_VOL_UP": $$mdi:volume-plus$$
+    "&kp C_MUTE": $$mdi:volume-mute$$
+
+    "&mmv MOVE_UP": Mouse Up
+    "&mmv MOVE_DOWN": Mouse Down
+    "&mmv MOVE_LEFT": Mouse Left
+    "&mmv MOVE_RIGHT": Mouse Right
+
+    "&msc SCRL_UP": { t: Scroll Up, h: $$mdi:pan-up$$}
+    "&msc SCRL_DOWN": { t: Scroll Down, h: $$mdi:pan-down$$}
+    "&msc SCRL_LEFT": { t: Scroll Left, h: $$mdi:pan-left$$}
+    "&msc SCRL_RIGHT": { t: Scroll Right, h: $$mdi:pan-right$$}
+
+    "&mkp RCLK": Right Click
+    "&mkp LCLK": Left Click
+    "&mkp MCLK": Middle Click
+    "&mkp MB4": { t: Back, h: $$mdi:backburger$$ }
+    "&mkp MB5": { t: Forward, h: $$mdi:forwardburger$$ }
+
+    "&kp LG(C)": { t: Copy, h: $$mdi:content-copy$$ }
+    "&kp LG(V)": { t: Paste, h: $$mdi:content-paste$$ }
+    "&kp LG(X)": { t: Cut, h: $$mdi:content-cut$$ }
+    "&kp LG(Z)": { t: Undo, h: $$mdi:undo$$ }
+    "&kp LG(LS(Z))": { t: Redo, h: $$mdi:redo$$ }
+
+    "&kp LGUI": { t: LGUI, h: $$mdi:apple-keyboard-command$$ }
+    "&kp LALT": { t: LALT, h: $$mdi:apple-keyboard-option$$ }
+    "&kp LCTRL": { t: LCTRL, h: $$mdi:apple-keyboard-control$$ }
+    "&kp LSHFT": { t: LSHFT, h: $$mdi:apple-keyboard-shift$$ }
+    "&kp RGUI": { t: RGUI, h: $$mdi:apple-keyboard-command$$ }
+    "&kp RALT": { t: RALT, h: $$mdi:apple-keyboard-option$$ }
+    "&kp RCTRL": { t: RCTRL, h: $$mdi:apple-keyboard-control$$ }
+    "&kp RSHFT": { t: RSHFT, h: $$mdi:apple-keyboard-shift$$ }
   skip_binding_parsing: false
   zmk_keycode_map:
     AMPERSAND: '&'
@@ -271,14 +284,14 @@ parse_config:
     LEFT_CONTROL: ⌃
     LEFT_ALT: ⎇
     LEFT_GUI: ⌘
-    LEFT_SHFT: ⇧
+    LEFT_SHIFT: ⇧
     RALT: ⎇
     RGUI: ⌘
     RSHFT: ⇧
     RIGHT_CONTROL: ⌃
     RIGHT_ALT: ⎇
     RIGHT_GUI: ⌘
-    RIGHT_SHFT: ⇧
+    RIGHT_SHIFT: ⇧
     LEFT: ←
     RIGHT: →
     UP: ↑
