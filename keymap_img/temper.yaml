@@ -228,7 +228,16 @@ layers:
     - ''
     - ''
   Fun:
-  - [F12, F7, F8, F9, PSCRN, '', '', '', '', '']
+  - - F12
+    - F7
+    - F8
+    - F9
+    - PSCRN
+    - {t: ZMK Studio, h: '$$mdi:lock-open-variant$$'}
+    - ''
+    - ''
+    - ''
+    - {t: Boot, h: '$$mdi:progress-download$$'}
   - - F11
     - F4
     - F5
