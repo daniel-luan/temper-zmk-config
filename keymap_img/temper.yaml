@@ -2,16 +2,16 @@ layout: {zmk_keyboard: temper}
 layers:
   Base:
   - [Q, W, E, R, T, Y, U, I, O, P]
-  - - {t: A, h: ⌘}
-    - {t: S, h: ⎇}
-    - {t: D, h: ⌃}
-    - {t: F, h: ⇧}
+  - - {t: A, h: LEFT GUI}
+    - {t: S, h: LEFT ALT}
+    - {t: D, h: LEFT CONTROL}
+    - {t: F, h: LEFT SHIFT}
     - G
     - H
-    - {t: J, h: ⇧}
-    - {t: K, h: ⌃}
-    - {t: L, h: ⎇}
-    - {t: '''', h: ⌘}
+    - {t: J, h: RIGHT SHIFT}
+    - {t: K, h: RIGHT CONTROL}
+    - {t: L, h: RIGHT ALT}
+    - {t: '''', h: RIGHT GUI}
   - - {t: Z, h: Button}
     - X
     - C
@@ -19,12 +19,12 @@ layers:
     - B
     - N
     - M
-    - {t: ',', s: <}
+    - ','
     - .
-    - {t: /, h: Button, s: '?'}
+    - {t: /, h: Button}
   - - {t: ESC, h: Media}
     - {t: SPACE, h: Nav}
-    - {t: ↹, h: Mouse}
+    - {t: TAB, h: Mouse}
     - {t: RET, h: Sym}
     - {t: BSPC, h: Num}
     - {t: DEL, h: Fun}
@@ -172,27 +172,18 @@ layers:
     - $$mdi:play-pause$$
     - $$mdi:volume-mute$$
   Num:
-  - - {t: '[', s: '{'}
-    - '7'
-    - '8'
-    - '9'
-    - {t: ']', s: '}'}
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - {t: ;, s: ':'}
+  - ['[', '7', '8', '9', ']', '', '', '', '', '']
+  - - ;
     - '4'
     - '5'
     - '6'
-    - {t: '=', s: +}
+    - '='
     - ''
     - {t: RSHFT, h: '$$mdi:apple-keyboard-shift$$'}
     - {t: RCTRL, h: '$$mdi:apple-keyboard-control$$'}
     - {t: RALT, h: '$$mdi:apple-keyboard-option$$'}
     - {t: RGUI, h: '$$mdi:apple-keyboard-command$$'}
-  - - {t: '`', s: '~'}
+  - - '`'
     - '1'
     - '2'
     - '3'
@@ -202,9 +193,9 @@ layers:
     - ''
     - {t: LALT, h: '$$mdi:apple-keyboard-option$$'}
     - ''
-  - - {t: ., s: '>'}
+  - - .
     - '0'
-    - {t: '-', s: _}
+    - '-'
     - ''
     - {type: held}
     - ''
@@ -260,7 +251,7 @@ layers:
     - ''
   - - ''
     - SPACE
-    - ↹
+    - TAB
     - ''
     - ''
     - {type: held}
@@ -275,16 +266,16 @@ combos:
   k: DEL
   l: [Nav]
 - p: [32, 31]
-  k: Middle Click
+  k: Mid Clk
   l: [Button]
 - p: [33, 34]
-  k: Middle Click
+  k: Mid Clk
   l: [Mouse, Button]
 - p: [33, 34]
   k: $$mdi:volume-mute$$
   l: [Media]
 - p: [32, 31]
-  k: {t: ., s: '>'}
+  k: .
   l: [Num]
 - p: [32, 31]
   k: (
