@@ -16,6 +16,8 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/36.h"
 
+#define QUICK_TAP_MS 175
+
 #define BAS 0
 #define NAV 1
 #define MOU 2
@@ -46,15 +48,6 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2 // Thumbs on 36+ keys.
 
 
-#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)                                 \
-  ZMK_HOLD_TAP(NAME, bindings = <HOLD>, <TAP>; flavor = "balanced";            \
-               tapping-term-ms = <280>; quick-tap-ms = <QUICK_TAP_MS>;         \
-               require-prior-idle-ms = <150>; hold-trigger-on-release;         \
-               hold-trigger-key-positions = <TRIGGER_POS>;)
-
-MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
-MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
-
 #define HRM_A &hml LEFT_GUI A
 #define HRM_S &hml LEFT_ALT S
 #define HRM_D &hml LEFT_CONTROL D
@@ -72,6 +65,30 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 };
 
 / {
+        behaviors {
+                hml: home_row_mod_left {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        require-prior-idle-ms = <150>;
+                        tapping-term-ms = <280>;
+                        quick-tap-ms = <175>;
+                        bindings = <&kp>, <&kp>;
+                        hold-trigger-key-positions = <KEYS_R THUMBS>; // List of keys on the right side of the keyboard
+                        hold-trigger-on-release;
+                };
+                hmr: home_row_mod_right {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        require-prior-idle-ms = <150>;
+                        tapping-term-ms = <280>;
+                        quick-tap-ms = <175>;
+                        bindings = <&kp>, <&kp>;
+                        hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
+                        hold-trigger-on-release;
+                };
+        };
         keymap {
                 compatible = "zmk,keymap";
 
