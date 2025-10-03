@@ -5,10 +5,10 @@ layers:
   - - {t: A, h: ⌘}
     - {t: S, h: ⎇}
     - {t: D, h: ⌃}
-    - {t: F, h: LEFT SHIFT}
+    - {t: F, h: ⇧}
     - G
     - H
-    - {t: J, h: RIGHT SHIFT}
+    - {t: J, h: ⇧}
     - {t: K, h: ⌃}
     - {t: L, h: ⎇}
     - {t: '''', h: ⌘}
@@ -29,9 +29,36 @@ layers:
     - {t: BSPC, h: Num}
     - {t: DEL, h: Fun}
   Nav:
-  - ['&bootloader', '', '', '', '', INS, HOME, ↑, END, PG UP]
-  - [⌘, ⎇, ⌃, ⇧, '', ⇪, ←, ↓, →, PG DN]
-  - ['', ⎇, '', '', '', Gui+Sft+Z, ⌘V, ⌘C, ⌘X, ⌘Z]
+  - - {t: Boot, h: '$$mdi:progress-download$$'}
+    - ''
+    - ''
+    - ''
+    - ''
+    - INS
+    - HOME
+    - $$mdi:arrow-up$$
+    - END
+    - PG UP
+  - - {t: LGUI, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: LALT, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: LCTRL, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: LSHFT, h: '$$mdi:apple-keyboard-shift$$'}
+    - ''
+    - {t: Caps Word, h: '$$mdi:apple-keyboard-caps$$'}
+    - $$mdi:arrow-left$$
+    - $$mdi:arrow-down$$
+    - $$mdi:arrow-right$$
+    - PG DN
+  - - ''
+    - {t: RALT, h: '$$mdi:apple-keyboard-option$$'}
+    - ''
+    - ''
+    - ''
+    - {t: Redo, h: '$$mdi:redo$$'}
+    - {t: Paste, h: '$$mdi:content-paste$$'}
+    - {t: Copy, h: '$$mdi:content-copy$$'}
+    - {t: Cut, h: '$$mdi:content-cut$$'}
+    - {t: Undo, h: '$$mdi:undo$$'}
   - - ''
     - {type: held}
     - ''
@@ -39,9 +66,36 @@ layers:
     - BSPC
     - DEL
   Mouse:
-  - ['&bootloader', '', '', '', '', '&msc SCRL_UP', '&msc SCRL_LEFT', '&mmv MOVE_UP', '&msc SCRL_RIGHT', '']
-  - [⌘, ⎇, ⌃, ⇧, '', '&msc SCRL_DOWN', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '']
-  - ['', ⎇, '', '', '', '', '&mkp MB4', '', '&mkp MB5', '']
+  - - {t: Boot, h: '$$mdi:progress-download$$'}
+    - ''
+    - ''
+    - ''
+    - ''
+    - {t: Scroll Up, h: '$$mdi:pan-up$$'}
+    - {t: Scroll Left, h: '$$mdi:pan-left$$'}
+    - Mouse Up
+    - {t: Scroll Right, h: '$$mdi:pan-right$$'}
+    - ''
+  - - {t: LGUI, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: LALT, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: LCTRL, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: LSHFT, h: '$$mdi:apple-keyboard-shift$$'}
+    - ''
+    - {t: Scroll Down, h: '$$mdi:pan-down$$'}
+    - Mouse Left
+    - Mouse Down
+    - Mouse Right
+    - ''
+  - - ''
+    - {t: RALT, h: '$$mdi:apple-keyboard-option$$'}
+    - ''
+    - ''
+    - ''
+    - ''
+    - {t: Back, h: '$$mdi:backburger$$'}
+    - ''
+    - {t: Forward, h: '$$mdi:forwardburger$$'}
+    - ''
   - - ''
     - ''
     - {type: held}
@@ -49,24 +103,60 @@ layers:
     - ''
     - ''
   Button:
-  - [Gui+Sft+Z, ⌘V, ⌘C, ⌘X, ⌘Z, Gui+Sft+Z, ⌘V, ⌘C, ⌘X, ⌘Z]
-  - [⌘, ⎇, ⌃, ⇧, '', '', ⇧, ⌃, ⎇, ⌘]
-  - - {t: Gui+Sft+Z, type: held}
-    - ⌘V
-    - ⌘C
-    - ⌘X
-    - ⌘Z
-    - Gui+Sft+Z
-    - ⌘V
-    - ⌘C
-    - ⌘X
-    - ⌘Z
-  - ['&mkp MCLK', '&mkp LCLK', '&mkp RCLK', '&mkp RCLK', '&mkp LCLK', '&mkp MCLK']
+  - - {t: Redo, h: '$$mdi:redo$$'}
+    - {t: Paste, h: '$$mdi:content-paste$$'}
+    - {t: Copy, h: '$$mdi:content-copy$$'}
+    - {t: Cut, h: '$$mdi:content-cut$$'}
+    - {t: Undo, h: '$$mdi:undo$$'}
+    - {t: Redo, h: '$$mdi:redo$$'}
+    - {t: Paste, h: '$$mdi:content-paste$$'}
+    - {t: Copy, h: '$$mdi:content-copy$$'}
+    - {t: Cut, h: '$$mdi:content-cut$$'}
+    - {t: Undo, h: '$$mdi:undo$$'}
+  - - {t: LGUI, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: LALT, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: LCTRL, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: LSHFT, h: '$$mdi:apple-keyboard-shift$$'}
+    - ''
+    - ''
+    - {t: RSHFT, h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: RCTRL, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: RALT, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: RGUI, h: '$$mdi:apple-keyboard-command$$'}
+  - - {t: Redo, h: '$$mdi:redo$$', type: held}
+    - {t: Paste, h: '$$mdi:content-paste$$'}
+    - {t: Copy, h: '$$mdi:content-copy$$'}
+    - {t: Cut, h: '$$mdi:content-cut$$'}
+    - {t: Undo, h: '$$mdi:undo$$'}
+    - {t: Redo, h: '$$mdi:redo$$'}
+    - {t: Paste, h: '$$mdi:content-paste$$'}
+    - {t: Copy, h: '$$mdi:content-copy$$'}
+    - {t: Cut, h: '$$mdi:content-cut$$'}
+    - {t: Undo, h: '$$mdi:undo$$'}
+  - [Middle Click, Left Click, Right Click, Right Click, Left Click, Middle Click]
   Media:
-  - ['&bootloader', '', '', '', '', '', BT PRV, BT CLR, '', BT NXT]
-  - [⌘, ⎇, ⌃, ⇧, '', EP TOG, PREV, VOL DN, VOL UP, NEXT]
+  - - {t: Boot, h: '$$mdi:progress-download$$'}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - BT PRV
+    - BT CLR
+    - ''
+    - BT NXT
+  - - {t: LGUI, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: LALT, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: LCTRL, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: LSHFT, h: '$$mdi:apple-keyboard-shift$$'}
+    - ''
+    - EP TOG
+    - $$mdi:skip-previous$$
+    - $$mdi:volume-minus$$
+    - $$mdi:volume-plus$$
+    - $$mdi:skip-next$$
   - - ''
-    - ⎇
+    - {t: RALT, h: '$$mdi:apple-keyboard-option$$'}
     - ''
     - ''
     - ''
@@ -78,11 +168,9 @@ layers:
   - - {type: held}
     - ''
     - ''
-    - STOP
-    - PP
-    - 'VOL
-
-      MUTE'
+    - $$mdi:stop$$
+    - $$mdi:play-pause$$
+    - $$mdi:volume-mute$$
   Num:
   - - {t: '[', s: '{'}
     - '7'
@@ -100,10 +188,10 @@ layers:
     - '6'
     - {t: '=', s: +}
     - ''
-    - ⇧
-    - ⌃
-    - ⎇
-    - ⌘
+    - {t: RSHFT, h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: RCTRL, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: RALT, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: RGUI, h: '$$mdi:apple-keyboard-command$$'}
   - - {t: '`', s: '~'}
     - '1'
     - '2'
@@ -112,7 +200,7 @@ layers:
     - ''
     - ''
     - ''
-    - ⎇
+    - {t: LALT, h: '$$mdi:apple-keyboard-option$$'}
     - ''
   - - {t: ., s: '>'}
     - '0'
@@ -122,8 +210,26 @@ layers:
     - ''
   Sym:
   - ['{', '&', '*', (, '}', '', '', '', '', '']
-  - [':', $, '%', ^, +, '', ⇧, ⌃, ⎇, ⌘]
-  - ['~', '!', '@', '#', '|', '', '', '', ⎇, '']
+  - - ':'
+    - $
+    - '%'
+    - ^
+    - +
+    - ''
+    - {t: RSHFT, h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: RCTRL, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: RALT, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: RGUI, h: '$$mdi:apple-keyboard-command$$'}
+  - - '~'
+    - '!'
+    - '@'
+    - '#'
+    - '|'
+    - ''
+    - ''
+    - ''
+    - {t: LALT, h: '$$mdi:apple-keyboard-option$$'}
+    - ''
   - - (
     - )
     - _
@@ -132,8 +238,26 @@ layers:
     - ''
   Fun:
   - [F12, F7, F8, F9, PSCRN, '', '', '', '', '']
-  - [F11, F4, F5, F6, SLCK, '', ⇧, ⌃, ⎇, ⌘]
-  - [F10, F1, F2, F3, '', '', '', '', ⎇, '']
+  - - F11
+    - F4
+    - F5
+    - F6
+    - SLCK
+    - ''
+    - {t: RSHFT, h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: RCTRL, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: RALT, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: RGUI, h: '$$mdi:apple-keyboard-command$$'}
+  - - F10
+    - F1
+    - F2
+    - F3
+    - ''
+    - ''
+    - ''
+    - ''
+    - {t: LALT, h: '$$mdi:apple-keyboard-option$$'}
+    - ''
   - - ''
     - SPACE
     - ↹
@@ -151,15 +275,13 @@ combos:
   k: DEL
   l: [Nav]
 - p: [32, 31]
-  k: '&mkp MCLK'
+  k: Middle Click
   l: [Button]
 - p: [33, 34]
-  k: '&mkp MCLK'
+  k: Middle Click
   l: [Mouse, Button]
 - p: [33, 34]
-  k: 'VOL
-
-    MUTE'
+  k: $$mdi:volume-mute$$
   l: [Media]
 - p: [32, 31]
   k: {t: ., s: '>'}
