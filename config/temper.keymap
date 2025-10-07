@@ -48,15 +48,15 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2 // Thumbs on 36+ keys.
 
 
-#define HRM_A &hml LEFT_GUI A
+#define HRM_A &hml LEFT_CONTROL A
 #define HRM_S &hml LEFT_ALT S
-#define HRM_D &hml LEFT_CONTROL D
+#define HRM_D &hml LEFT_GUI D
 #define HRM_F &hml LEFT_SHIFT F
 
 #define HRM_J &hmr RIGHT_SHIFT J
-#define HRM_K &hmr RIGHT_CONTROL K
+#define HRM_K &hmr RIGHT_GUI K
 #define HRM_L &hmr RIGHT_ALT L
-#define HRM_SQT &hmr RIGHT_GUI SQT
+#define HRM_SQT &hmr RIGHT_CONTROL SQT
 
 &lt {
   flavor = "balanced";
