@@ -13,15 +13,15 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble_zmk
     shield: temper_dongle dongle_screen
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: nice_nano_v2
+  - board: nice_nano_nrf52840_zmk
     shield: temper_left
-  - board: nice_nano_v2
+  - board: nice_nano_nrf52840_zmk
     shield: temper_right
-  - board: nice_nano_v2
+  - board: nice_nano_nrf52840_zmk
     shield: settings_reset
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble_zmk
     shield: settings_reset
