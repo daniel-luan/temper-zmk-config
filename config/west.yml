@@ -4,8 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: carrefinho
-      url-base: https://github.com/carrefinho
     - name: janpfischer
       url-base: https://github.com/janpfischer
   projects:
@@ -16,11 +14,8 @@ manifest:
     - name: zmk-helpers
       remote: urob
       revision: main
-    - name: prospector-zmk-module
-      remote: carrefinho
-      revision: main
     - name: zmk-dongle-screen
       remote: janpfischer
-      revision: main
+      revision: upgrade-4.1
   self:
     path: config
